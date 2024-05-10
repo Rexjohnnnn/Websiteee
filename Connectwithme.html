@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            /* Adding background image */
+            background-image: url('rj.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: #ededed; 
+            position: relative; 
+            min-height: 100vh; 
+        }
+        
+        header {
+            background-color: #7057af; 
+            padding: 20px;
+            text-align: center;
+            border-bottom: 8px solid #574489; /* 3D effect */
+        }
+        
+        h1 {
+            color: #fff;
+            transition: text-shadow 0.3s; /* Add transition effect */
+        }
+        
+        h1:hover {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add a shadow on hover */
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: calc(100vh - 40px); 
+            overflow-y: auto; 
+            transform: translateZ(0); /* Ensure hardware acceleration for smoother animations */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            transition: transform 0.3s; /* Add transition effect */
+        }
+        
+        li:hover {
+            transform: scale(1.1); /* Scale up the text on hover */
+        }
+        
+        a {
+            color: #333; 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #7057af;
+            text-decoration: underline;
+        }
+        
+        p {
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            transition: transform 0.3s; /* Add transition effect */
+        }
+        
+        p:hover {
+            transform: scale(1.1); /* Scale up the text on hover */
+        }
+        
+        .home-button {
+            display: block;
+            width: 150px; 
+            padding: 10px 0; 
+            background-color: #333;
+            color: #ededed;
+            text-decoration: none;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .social-media li {
+            perspective: 1000px; /* Define perspective for 3D effect */
+            transition: transform 0.3s; /* Add transition effect */
+        }
+
+        .social-media li:hover {
+            transform: translateY(-3px); /* Lift the element slightly on hover for a 3D effect */
+        }
+
+        .social-media a {
+            position: relative;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-media a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
+            border-radius: 5px;
+            pointer-events: none; /* Ensure the pseudo-element doesn't interfere with mouse events */
+            transition: opacity 0.3s;
+            opacity: 0; /* Initially invisible */
+        }
+
+        .social-media a:hover::after {
+            opacity: 1; /* Fade in the pseudo-element on hover */
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            filter: grayscale(30%) brightness(90%) contrast(120%);
+            transform: rotate(-10deg) translateY(-20px);
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .profile-picture:hover {
+            transform: rotate(0deg) translateY(0px) scale(1.05);
+            filter: grayscale(0%) brightness(100%) contrast(100%);
+        }
+        
+        ul ul a {
+            font-size: 18px;
+        }
+        
+        .contact-info {
+            font-size: 20px;
+            transition: color 0.3s; /* Add transition effect */
+        }
+        
+        .contact-info:hover {
+            color: #7057af; /* Change text color on hover */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Connect with Me</h1>
+    </header>
+    <main>
+        <img src="pisbokk.jpg" alt="Your Image" class="profile-picture">
+        <p>Get in touch with me through the following:</p>
+        <ul class="social-media">
+            <li class="contact-info"><strong>Email:</strong> rex.derayal@jmc.edu.ph</li>
+            <li class="contact-info"><strong>Phone:</strong> 09454485595</li>
+            <li class="contact-info"><strong>Social Media:</strong>
+                <ul>
+                    <li><a href="https://www.instagram.com/rexjohn.szn/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/rexjohn.derayal.71">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/kiksss01">Facebook</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </main>
+    
+    <a href="index.html" class="home-button">Back to Home</a>
+</body>
+</html>

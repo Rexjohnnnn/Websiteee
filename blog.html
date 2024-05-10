@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('rj.jpg'), linear-gradient(45deg, #4CAF50, #2196F3); /* Added linear gradient as fallback */
+            background-size: cover; /* Adjusts the background image to cover the entire body */
+            background-position: center; /* Centers the background image */
+            color: #ededed; /* Text color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto; /* Adjusted margin for better positioning */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Added transparent background */
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transform: perspective(1000px) rotateX(20deg); /* Apply 3D transformation */
+        }
+        .post {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative; /* Enable positioning for overlay */
+            z-index: 1; /* Ensure content is above overlay */
+        }
+        .post:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            z-index: -1; /* Set below content */
+            transform: rotateX(10deg); /* Adjust tilt */
+        }
+        .post img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .post h2 {
+            font-size: 2em;
+            margin-top: 0;
+            color: #ededed; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+        .post p {
+            margin-top: 10px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .post a {
+            color: #ededed; 
+            text-decoration: none;
+            border-bottom: 1px solid #ededed; 
+            transition: border-color 0.3s ease; 
+        }
+        .post a:hover {
+            border-color: transparent; 
+        }
+        h1 {
+            text-align: center;
+            color: #ededed; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+        p {
+            text-align: justify;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-home a {
+            color: #ededed;
+            text-decoration: none;
+            background-color: #333;
+            padding: 15px 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px red;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .back-home a:hover {
+            background-color: #000000;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Blog Page!</h1>
+        <p>Explore our latest articles and posts.</p>
+
+        <!-- Example Blog Post 1 -->
+        <div class="post">
+            <h2>Blog Post 1: Title of the Post</h2>
+            <img src="poklaa.jpg" alt="Post 1">
+            <p>Description of the blog post goes here. Share your thoughts, insights, and experiences related to any topic.</p>
+            <p>Date: January 1, 2024</p>
+            <p><strong>Category:</strong> Technology</p>
+            <p><a href="#">Read More</a></p>
+        </div>
+
+        <!-- Example Blog Post 2 -->
+        <div class="post">
+            <h2>Blog Post 2: Title of the Post</h2>
+            <img src="lapok.jpg" alt="Post 2">
+            <p>When we're out planting trees with friends, our feet inevitably get a bit dirty. But in those moments, amidst the soil and laughter, there's a sense of shared purpose and connection that transcends the dirt. It's a reminder that the best memories often come with a touch of messiness, and the bonds we forge while making a positive impact on the world are truly invaluable.</p>
+            <p>Date: April 29, 2024</p>
+            <p><strong>Category:</strong> Nature</p>
+            <p><a href="#">Read More</a></p>
+        </div>
+
+        <!-- Add more blog posts as needed -->
+        
+        <!-- Back Home Button -->
+        <div class="back-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
